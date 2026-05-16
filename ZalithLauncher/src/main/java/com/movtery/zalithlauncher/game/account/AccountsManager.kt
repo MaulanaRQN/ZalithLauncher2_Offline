@@ -211,7 +211,7 @@ object AccountsManager {
      */
     private fun refreshCurrentAccountState() {
         val currentAccount = getCurrentAccount()
-        val isOffline = checkLimit()
+        val isOffline = false
         _currentAccountFlow.update {
             //若处于非正版状态，不允许使用账号
             if (isOffline) null else currentAccount
